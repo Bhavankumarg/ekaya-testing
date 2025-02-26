@@ -32,6 +32,15 @@ const config: Config = {
         'extrabold': '800',
         'black': '900',
       },
+      animation: {
+        swirl: "swirls 2s linear infinite",
+      },
+      keyframes: {
+        swirls: {
+          from: { strokeDashoffset: "0" },
+          to: { strokeDashoffset: "300" },
+        },
+      },
     },
   },
   plugins: [

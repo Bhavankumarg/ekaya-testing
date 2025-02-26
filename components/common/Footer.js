@@ -16,7 +16,7 @@ function Footer() {
       { href: "/takshavi", label: "Takshavi" }
     ]},
     { title: "Projects in Goa", links: [
-      { label: "Goa - Dona Paula" },
+      { href: "/about-dona-paula", label: "Goa - Dona Paula" },
       { href: "/vista-do-mar", label: "— Vista Do Mar" },
       { label: "Moira" }
     ]}
@@ -31,7 +31,7 @@ function Footer() {
 
   return (
     <div className="z-50">
-      <div className="lg:mt-[100px] mt-[30px] grid grid-cols-3 lg:w-[80%] mx-auto overflow-hidden z-50">
+      <div className="lg:mt-[100px] mt-[30px] grid grid-cols-3 lg:w-[80%] mx-auto overflow-hidden z-50 link-container">
         {socialLinks.map((link, index) => (
           <Link key={index} href={link.href} className="justify-center align-center flex border group border-e-green p-4 text-xl poppins-light">
             {link.label}
