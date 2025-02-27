@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { initFlowbite } from "flowbite";
 import { FaBarsStaggered } from "react-icons/fa6";
+import { usePathname } from "next/navigation";
 
 function Header({ stats }) {
   const [status, setStatus] = useState(false);
@@ -26,18 +27,35 @@ function Header({ stats }) {
   //   useEffect(() => {
   //     initFlowbite();
   // },[])
+  const pathname = usePathname();
+
+  // Check if the current page is the 404 (not-found) page
+  const isNotFoundPage =
+    pathname === "/our-team" ||
+    pathname === "/" ||
+    pathname === "/about-dona-paula" ||
+    pathname === "/vista-do-mar" ||
+    pathname === "/takshavi" ||
+    pathname === "/about-embrace" ||
+    pathname === "/about-ellen" ||
+    pathname === "/about-moira" ||
+    pathname === "/about-amora" ||
+    pathname === "/about-us" ||
+    pathname === "/our-team" ||
+    pathname === "/why-ekaya" ||
+    pathname === "/sustainability";
 
   return (
     <>
-      <span
-        className="absolute w-full h-screen z-10"
-        onClick={handleClick}
-      ></span>
-      <nav class="bg-transparent bg-opacity-5 absolute w-full z-50 top-0 start-0 border-b border-[#f8fafc7a]">
+      <nav
+        className={`absolute w-full z-50 top-0 start-0 border-b border-[#f8fafc7a] ${
+          isNotFoundPage ? "bg-transparent" : "bg-black"
+        }`}
+      >
         <div class="flex justify-between p-4 lg:w-[80%] mx-auto  items-center z-50 ">
           <div class="text-center lg:hidden">
             <button
-              class="text-white bg-white  focus:ring-4 focus:ring-blue-300 font-medium rounded-lg px-2 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
+              class="text-white bg-white font-medium rounded-lg px-2 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
               type="button"
               data-drawer-target="drawer-navigation"
               data-drawer-show="drawer-navigation"

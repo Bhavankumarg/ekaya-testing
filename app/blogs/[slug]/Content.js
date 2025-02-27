@@ -2,7 +2,6 @@
 import React, { useState, useEffect } from "react";
 import configData from "../../../config.json";
 import Seo from "../../../components/common/Seo";
-import Custom404 from "../../../app/not-found";
 function Content({ slug }) {
   const [Page, setData] = useState();
   const [pageTitle, setPageTitle] = useState();
