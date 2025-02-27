@@ -2,9 +2,7 @@
 import Link from "next/link";
 import { LuArrowLeft, LuArrowRight } from "react-icons/lu";
 import "../components/NotFound/NotFound.css";
-import { usePathname } from "next/navigation";
 export default function Custom404() {
-  const pathname = usePathname();
   return (
     <>
       <div className="bg-black h-screen">

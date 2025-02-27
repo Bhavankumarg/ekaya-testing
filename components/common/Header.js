@@ -41,9 +41,10 @@ function Header({ stats }) {
     pathname === "/about-moira" ||
     pathname === "/about-amora" ||
     pathname === "/about-us" ||
-    pathname === "/our-team" ||
     pathname === "/why-ekaya" ||
-    pathname === "/sustainability";
+    pathname === "/sustainability" ||
+    pathname.startsWith("/blogs/");
+
 
   return (
     <>
